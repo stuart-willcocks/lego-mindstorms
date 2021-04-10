@@ -37,7 +37,7 @@ def arm_up():
 
 def turn(target_degrees):
     turn_motor.run_target(255, target_degrees, Stop.COAST)
-    say_number(target_degrees)
+    #say_number(target_degrees)
 
 def say_number(number):
     number_as_string = str(number)
@@ -83,7 +83,7 @@ def say_number(number):
 brick.sound.file(SoundFile.ONE)
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect(('192.168.86.71',50001))
+s.connect(('192.168.86.23',50001))
 
 s.send(bytes('one\n', 'utf-8'))
 
